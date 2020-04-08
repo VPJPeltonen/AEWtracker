@@ -1,2 +1,4 @@
 # AEWtracker
-WPF app for tracking and examening wrestling stats
+WPF sovellus painitulosten tallentamiseen ja tarkasteluun
+
+[Dokumentaatio](Docs/Suunnitelma.md)

@@ -14,28 +14,48 @@
 
 
 ## Tekijä
-🔖 Tietoa tekijöistä
+Yksin tekijänä Vili-Pekka Peltonen L4181 
 
 ## Kuvaus
-🔖 Sovelluksen yleiskuvaus
+Sovellus jolla voi ottaa ylös ja tarkastella showpainiotteluiden tuloksia. Testidatana käytetään AEW painipromootion tuloksia.
 
 ## Kohdeyleisö
-🔖 Kenelle sovellus on suunnattu, kohdeyleisö
+Suunnattu ihmisille jotka seuraavat showpainia.
 
 ## Käyttöympäristö ja käytetyt teknologiat
-🔖 Käyttöympäristö ja käytetyt teknologiat
-
-## Käyttäjäroolit
-🔖 Tunnistetaan eri käyttäjäroolit, jos niitä on
+Tehdään pääasiassa windows alustaiselle PC:lle. Totetetaan WPF sovelluksena käyttäen C# ja XAML kieliä.
 
 ## Toiminnot
-🔖 Lista toteutettavista toiminnoista, toiminnot kuvataan tässä vaiheessa nimenomaan loppukäyttäjän näkökulmasta
+
+### Tietojan Tallennus
+- Painijat
+    - Nimi
+- Tagtiimit
+    - Nimi
+    - Jäsenet
+- Mestaruudet
+    - Mestarit
+        - Mestaruusajat
+- Ottelut
+    - Osallistujat
+    - Lopputulos
+        - Voittaja
+        - Voiton tapa
+    - Ottelupäivä
+
+### Tietojen Tarkastelu
+- Painijan voittojen määriä, voitto/tappio suhteita ja mestaruuksia
+- Tagtiimien voittojen määriä, voitto/tappio suhteita ja mestaruuksia
+- Vertailla kahta painijaa tai joukuetta
 
 ## Käyttötapaus-kaavio
 🔖 Toiminnoista piiretään UML:n Käyttötapaus-kaavio, kaaviossa esitetään eri roolit ja käyttötapaukset=toiminnot
+
 
 ## Käsitteet
 🔖 Sovelluksen keskeiset käsitteet listataan ja luodaan Käsitemalli, jossa esitetään käsitteet ja niiden väliset suhteet; tästä jalostetaan sitten luokkamalli sovelluksesta, mitä luokkia sovelluksessa on ja niiden tärkeimmät tehtävät ja ominaisuudet sekä luokkien väliset suhteet UML:tä käyttäen. Suunnitelmassa alustava ajatus, loppuraportissa lopullinen rakenne ja perustelut muutoksille PS Muista kertoa ajatuksista, pelkkä kaaviokuvio ei ole riittävä.
 
 ## Työaikasuunnitelma
+Mittaan työaikani käyttäen Toggl palvelua
+
 🔖 Työaikasuunnitelma (mitä aiotaan tehdään ja minä päivänä/viikkona, suunnitellut resurssit), kerää toteuma päivittäin/viikottain, esitä suunnitelmassa muutama tuleva viikko. Pohdi kuitenkin kokonaisuutta.
