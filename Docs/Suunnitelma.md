@@ -6,9 +6,15 @@
 1. [Kuvaus](#kuvaus)
 1. [Kohdeyleisö](#kohdeyleisö)
 1. [Käyttöympäristö ja käytetyt teknologiat](#käyttöympäristö-ja-käytetyt-teknologiat)
-1. [Käyttäjäroolit](#käyttäjäroolit)
 1. [Toiminnot](#toiminnot)
-1. [käyttötapaus-kaavio](#käyttötapaus-kaavio)
+    1. [Tietojan Tallennus](#tietojan-tallennus)
+    1. [Tietojan Tarkastelu](#tietojan-tarkastelu)
+    1. [Tietojan Muokkaus](#tietojan-muokkaus)
+    1. [Ranking](#ranking)
+1. [Käyttäjäroolit](#käyttäjäroolit)
+    1. [Käyttäjä/ylläpitäjä](#käyttäjä/ylläpitäjä)
+    1. [Tietojen Tarkastelija](#tietojen-tarkastelija)
+1. [Käyttötapaus-kaavio](#käyttötapaus-kaavio)
 1. [Käsitteet](#käsitteet)
 1. [Työaikasuunnitelma](#työaikasuunnitelma)
 
@@ -17,17 +23,20 @@
 Yksin tekijänä Vili-Pekka Peltonen L4181 
 
 ## Kuvaus
-Sovellus jolla voi ottaa ylös ja tarkastella showpainiotteluiden tuloksia. Testidatana käytetään AEW painipromootion tuloksia.
+Sovellus jolla voi ottaa ylös ja tarkastella showpainiotteluiden tuloksia. Testidatana käytetään AEW painipromootion tuloksia. Tämä koska promootio on suhteellisen uusi joten tarvittava datan määrä ei ole kovin suuri.
 
 ## Kohdeyleisö
-Suunnattu ihmisille jotka seuraavat showpainia.
+Suunnattu ihmisille jotka seuraavat showpainia ja tykkäävät turhista tilastoista.
 
 ## Käyttöympäristö ja käytetyt teknologiat
-Tehdään pääasiassa windows alustaiselle PC:lle. Totetetaan WPF sovelluksena käyttäen C# ja XAML kieliä.
+Tehdään pääasiassa windows alustaiselle PC:lle. Totetetaan WPF sovelluksena käyttäen C# ja XAML kieliä. Tietokanta toteutetaan käyttämällä SQLiteä.
 
 ## Toiminnot
 
 ### Tietojan Tallennus
+Sovelluksen kautta voidaan tietokanataan syöttää erilaisia tietoja. 
+
+Päätietokatergoriat ovat:
 - Painijat
     - Nimi
 - Tagtiimit
@@ -44,18 +53,44 @@ Tehdään pääasiassa windows alustaiselle PC:lle. Totetetaan WPF sovelluksena 
     - Ottelupäivä
 
 ### Tietojen Tarkastelu
-- Painijan voittojen määriä, voitto/tappio suhteita ja mestaruuksia
-- Tagtiimien voittojen määriä, voitto/tappio suhteita ja mestaruuksia
-- Vertailla kahta painijaa tai joukuetta
+Voidaan tarkastella painijan tai tagtiimin voittojen määriä, voitto/tappio suhteita ja mestaruuksia. Kahta joukuetta tai painijaa voidaan myös vertailla rinnakkain.
+
+### Tietojen Muokkaus
+Tietoja voi muokata ja poistaa jos ne on syötetty virheellisesti.
+
+### Tilastot
+Voidaan järjestellä joukkueita ja painijoita esimerkiksi voittojen määrien perusteella
+
+## Käyttäjäroolit
+
+### Käyttäjä/ylläpitäjä
+Käyttäjä joka haluaa lisätä ja luoda uusia tietoja sovellukseen. Tarkastelee myös luotuija tietoja
+
+### Tietojen Tarkastelija
+Käyttää ainoastaan valmiiksi luotuja tietokantoja katsellakseen tilastoja
 
 ## Käyttötapaus-kaavio
-🔖 Toiminnoista piiretään UML:n Käyttötapaus-kaavio, kaaviossa esitetään eri roolit ja käyttötapaukset=toiminnot
-
+![UML](Images/AEWtrackerUML.png)
 
 ## Käsitteet
-🔖 Sovelluksen keskeiset käsitteet listataan ja luodaan Käsitemalli, jossa esitetään käsitteet ja niiden väliset suhteet; tästä jalostetaan sitten luokkamalli sovelluksesta, mitä luokkia sovelluksessa on ja niiden tärkeimmät tehtävät ja ominaisuudet sekä luokkien väliset suhteet UML:tä käyttäen. Suunnitelmassa alustava ajatus, loppuraportissa lopullinen rakenne ja perustelut muutoksille PS Muista kertoa ajatuksista, pelkkä kaaviokuvio ei ole riittävä.
+- Painija
+- Tagtiimi
+- Mestaruus
+- Ottelu
+
+![Käsitteet](Images/Käsitekartta.png)
+Käyttöliittymän kauttaa pääsee joko tallentamaan tietoja tai tarkastelemaan niitä tilastojen kautta.
+
+### Tietokanta
+![Tietokanta](Images/Painitaulut.png)
 
 ## Työaikasuunnitelma
 Mittaan työaikani käyttäen Toggl palvelua
 
-🔖 Työaikasuunnitelma (mitä aiotaan tehdään ja minä päivänä/viikkona, suunnitellut resurssit), kerää toteuma päivittäin/viikottain, esitä suunnitelmassa muutama tuleva viikko. Pohdi kuitenkin kokonaisuutta.
+| Ominaisuus          | Suuniteltu Valmistuminen | Valmis     | Käytety Aika |
+|:-:|:-:|:-:|:-:|
+| Suunnitelma         | 09.04.2020               | 09.04.2020 | 4h           |
+| Tietojan Tallennus  | 13.04.2020               |            |              |
+| Tietojan Tarkastelu | 16.04.2020               |            |              |
+| Tietojan Muokkaus   | 20.04.2020               |            |              |
+| Tilastot            | 25.04.2020               |            |              |
